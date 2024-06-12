@@ -14,7 +14,7 @@ class LoginPage:
     
     @property
     def __input_password(self):
-        return self.driver.find_element(By.ID, "password")
+        return self.driver.find_element(By.ID, "password") 
     
     @property
     def __button_login(self):
@@ -42,3 +42,27 @@ class LoginPage:
         Return: mensaje de error
         """
         return self.__h3_mensajeError.text
+
+    def get_title(self):
+        """
+        Función para obtener el título de la página
+        """
+        title = self.driver.title
+        print(f"The title of the page is: {title}")
+        return title
+
+    def test_get_title(self):
+        """
+        Función para probar el método get_title
+        """
+        expected_title = "Titulo errado para que falle"
+        actual_title = self.get_title()
+        assert actual_title == expected_title, f"Title mismatch. Expected: {expected_title}, Actual: {actual_title}"
+        print("Title test passed successfully!")
+
+    
+    def is_logged_in(self):
+        """
+        Función para verificar si el usuario está loggeado
+        """
+        return "inventory.html" in self.driver.current_url
