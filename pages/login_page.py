@@ -55,7 +55,7 @@ class LoginPage:
         """
         Función para probar el método get_title
         """
-        expected_title = "Titulo errado para que falle"
+        expected_title = "Swag Labs"
         actual_title = self.get_title()
         assert actual_title == expected_title, f"Title mismatch. Expected: {expected_title}, Actual: {actual_title}"
         print("Title test passed successfully!")
