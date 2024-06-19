@@ -1,3 +1,4 @@
+
 # Proyecto de Automatización Web con Selenium y Python
 
 Este repositorio contiene un framework de automatización web utilizando Selenium y Python. A continuación, se detallan los pasos para configurar el entorno, ejecutar las pruebas e incluir nuevas pruebas.
